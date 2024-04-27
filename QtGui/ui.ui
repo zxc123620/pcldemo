@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1126</width>
+    <height>905</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QFrame" name="menu_frame">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>231</width>
+     <height>671</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>0</y>
+      <width>191</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pcd_show_btn">
+       <property name="text">
+        <string>点云显示</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pcd_loop_show_btn">
+       <property name="text">
+        <string>点云轮播</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>点云差分</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="log_frame">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>710</y>
+     <width>1101</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1081</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>日志区域</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>20</y>
+     <width>831</width>
+     <height>661</height>
+    </rect>
+   </property>
+   <widget class="QWidget" name="page">
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>821</width>
+       <height>661</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="pcd_layout"/>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_2"/>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pcd_show_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>select_pcd_and_show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>130</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>246</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pcd_loop_show_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>loop_pcd_show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>134</x>
+     <y>86</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>259</x>
+     <y>145</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>point_cluster()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>94</x>
+     <y>131</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>273</x>
+     <y>324</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>select_pcd_and_show()</slot>
+  <slot>loop_pcd_show()</slot>
+  <slot>point_cluster()</slot>
+ </slots>
+</ui>
